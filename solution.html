@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Error Solution</title>
+</head>
+<body>
+  <p>This is a paragraph.</p>
+  <div id="myDiv"></div>
+  <script>
+    // Check if the element exists before accessing the attribute
+    let element = document.getElementById('myDiv');
+    let attributeValue = null;
+    if (element) {
+      attributeValue = element.getAttribute('data-custom') || null; // added default data
+    }
+    console.log(attributeValue); // Output: null or the value if attribute exists
+
+    //Check for null before using the method
+    let anotherElement = document.getElementById('anotherDiv');
+    if (anotherElement) {
+      anotherElement.style.color = 'red';
+    } else {
+      console.error("Element 'anotherDiv' not found");
+    }
+  </script>
+</body>
+</html>
