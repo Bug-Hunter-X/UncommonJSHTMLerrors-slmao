@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Error</title>
+</head>
+<body>
+  <p>This is a paragraph.</p>
+  <div id="myDiv"></div>
+  <script>
+    //Attempting to access a non-existent attribute
+    let element = document.getElementById('myDiv');
+    let nonExistentAttribute = element.getAttribute('nonExistent');
+    console.log(nonExistentAttribute); // Output: null 
+
+    // Attempting to use a method on a null object
+    let anotherElement = document.getElementById('anotherDiv');
+    anotherElement.style.color = 'red'; // Throws an error because anotherElement is null
+  </script>
+</body>
+</html>
